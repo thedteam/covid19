@@ -1,6 +1,31 @@
 @font-face {
+    font-family: Inter-VariableFont_slnt;
+    src: url(../font/Inter-VariableFont_slnt.html\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-Black;
+    src: url(../font/Inter-Black.ttf);
+}
+
+@font-face {
     font-family: Inter-Bold;
     src: url(../font/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url(../font/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Inter-ExtraLight;
+    src: url(../font/Inter-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Inter-Light;
+    src: url(../font/Inter-Light.ttf);
 }
 
 @font-face {
@@ -18,12 +43,22 @@
     src: url(../font/Inter-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: Inter-Thin;
+    src: url(../font/Inter-Thin.ttf);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+}
+
 a {
-    text-decoration: none !important;
+    /* display: inline-block; */
+    text-decoration: none;
     color: #fff;
     -webkit-transition: all ease 0.3s;
     -o-transition: all ease 0.3s;
@@ -34,23 +69,55 @@ a:hover {
     text-decoration: none;
     color: inherit;
 }
-
-
-/*
-*
-* ==========================================
-* navbar start
-* ==========================================
-*
-*/
-
 .logo {
     width: 60%;
 }
 
+.start-header {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0);
+}
+
+.start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 #8a9ba526;
+    padding: 10px 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.start-header.scroll-on .navbar-brand img {
+    height: 1px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+/* .navigation-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+} */
+
 .navbar {
     padding: 0;
     z-index: 1;
+}
+
+.navbar-brand img {
+    height: 28px;
+    width: auto;
+    display: block;
+    filter: brightness(10%);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .navbar-toggler {
@@ -121,6 +188,10 @@ a:hover {
     color: #44B564 !important;
 }
 
+.nav-item:hover img {
+    fill: #065e77 !important;
+}
+
 .nav-item.active .nav-link {
     color: #44B564 !important;
 }
@@ -153,6 +224,62 @@ a:hover {
 }
 
 
+/* #Primary style
+================================================== */
+
+.full-height {
+    height: 100vh;
+}
+
+.nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 200ms linear;
+}
+
+.nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+}
+
+.dropdown-menu {
+    padding: 10px !important;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #212121;
+    background-color: #fcfaff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-item {
+    padding: 3px 15px;
+    color: #000000;
+    border-radius: 2px;
+    transition: all 200ms linear;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #fff;
+    background-color: #007bff;
+}
+
+
 /*
 *
 * ==========================================
@@ -165,10 +292,133 @@ a:hover {
 /*
 *
 * ==========================================
-* Hero Section start
+* @MEDIA 991.98PX start
 * ==========================================
 *
 */
+
+@media (max-width: 991.98px) {
+    .start-header {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .nav-item:after {
+        display: none;
+    }
+    .nav-item-1 ::before {
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 0;
+        width: 11px;
+        height: 1px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+        margin-left: -24px;
+    }
+    .dropdown-toggle::after {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: -23px;
+        width: 1px;
+        height: 11px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    .dropdown-menu {
+        padding: 0 !important;
+        background-color: transparent;
+        box-shadow: none;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]+.dropdown-menu {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    .bg-light-1 {
+        /* background: rgba(255, 255, 255, 0.95); */
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-item:after {
+        display: none;
+    }
+    .nav-item-1 ::before {
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 0;
+        width: 11px;
+        height: 1px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+        margin-left: -24px;
+    }
+    .dropdown-toggle::after {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: -23px;
+        width: 1px;
+        height: 11px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    .dropdown-menu {
+        padding: 0 !important;
+        background-color: transparent;
+        box-shadow: none;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]+.dropdown-menu {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    .bg-light-1 {
+        /* background: rgba(255, 255, 255, 0.95); */
+    }
+}
+
+
+/*
+*
+* ==========================================
+* @MEDIA 991.98PX end
+* ==========================================
+*
+*/
+
+a {
+    text-decoration: none !important
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 
 #hero {
     /* width: 100%; */
@@ -176,6 +426,104 @@ a:hover {
     position: relative;
     background: #fff url("") center top no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 767px) {
+    /* #hero { */
+    /* height: auto; */
+    /* padding: 100px 0 60px 0;
+    } */
+    #hero .container {
+        /* height: auto !important; */
+    }
+    #hero .intro-img {
+        width: 80%;
+    }
+}
+
+
+/* 
+@media (max-width: 991px) and (min-width: 768px) {
+    #hero .intro-info {
+        padding-top: 55px;
+    }
+} */
+
+@media (max-width: 767px) {
+    #hero .intro-info {
+        text-align: center;
+        padding-top: 40px;
+    }
+}
+
+#hero .intro-info h2 {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: 42px; */
+    /* font-size: calc(32px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: calc(1.9em + 0.6vw);
+    line-height: 56px;
+    /* or 133% */
+    font-family: Inter-Bold;
+    letter-spacing: 0.01em;
+    color: #333333;
+}
+
+@media (max-width: 767px) {
+    #hero .intro-info h2 {
+        /* font-size: 34px; */
+        margin-bottom: 30px;
+    }
+}
+
+.header-tag-line {
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 19px; */
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: calc(0.7em + 0.6vw);
+    /* width: 516px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* line-height: 36px; */
+    font-family: Inter-Regular;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: rgba(51, 51, 51, 0.65);
+}
+
+#hero .intro-info .btn-get-started {
+    font-family: Inter-Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(0.7em + 0.6vw);
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 14px;
+    color: rgb(255, 255, 255);
+    background: rgb(68, 181, 100);
+}
+
+
+/* #hero .intro-info .btn-get-started:hover {
+    background: #434747;
+} */
+
+
+/* @media (min-width: 768px) {
+    #hero .container {
+        max-width: 758px;
+    }
+} */
+
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+section {
+    overflow: hidden;
 }
 
 .alert-header {
@@ -195,39 +543,6 @@ a:hover {
     height: 36.57px;
 }
 
-#hero .intro-info h2 {
-    margin-bottom: 20px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: calc(1.9em + 0.6vw);
-    line-height: 56px;
-    font-family: Inter-Bold;
-    letter-spacing: 0.01em;
-    color: #333333;
-}
-
-.header-tag-line {
-    font-style: normal;
-    font-weight: 400;
-    font-size: calc(0.7em + 0.6vw);
-    font-family: Inter-Regular;
-    align-items: center;
-    letter-spacing: 0.01em;
-    color: rgba(51, 51, 51, 0.65);
-}
-
-#hero .intro-info .btn-get-started {
-    font-family: Inter-Medium;
-    font-style: normal;
-    font-weight: 500;
-    font-size: calc(0.7em + 0.6vw);
-    display: inline-block;
-    padding: 14px 30px;
-    border-radius: 14px;
-    color: rgb(255, 255, 255);
-    background: rgb(68, 181, 100);
-}
-
 .header-virus {
     position: absolute;
     height: 218.42119783355207px;
@@ -239,64 +554,6 @@ a:hover {
     bottom: 89.67%;
     transform: rotate(8.88deg);
 }
-
-
-/*
-*
-* ==========================================
-* Hero Section end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* @MEDIA 991.98PX start
-* ==========================================
-*
-*/
-
-@media (max-width: 991.98px) {
-    .nav-item:after {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .nav-item:after {
-        display: none;
-    }
-    #hero .intro-img {
-        width: 80%;
-    }
-    #hero .intro-info {
-        text-align: center;
-        padding-top: 40px;
-    }
-    #hero .intro-info h2 {
-        margin-bottom: 30px;
-    }
-}
-
-
-/*
-*
-* ==========================================
-* @MEDIA 991.98PX end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* card section start
-* ==========================================
-*
-*/
 
 .cardss {
     text-align: center;
@@ -320,6 +577,7 @@ a:hover {
     font-weight: 500;
     /* font-size: 20px; */
     font-size: calc(0.70em + 0.6vw);
+    /* line-height: 24px; */
     color: #555555;
     margin-bottom: 5px;
 }
@@ -330,6 +588,7 @@ a:hover {
     font-weight: 600;
     /* font-size: 28px; */
     font-size: calc(1em + 0.6vw);
+    /* line-height: 34px; */
     letter-spacing: 0.03em;
     color: #484848;
     margin-bottom: 5px;
@@ -341,6 +600,7 @@ a:hover {
     font-weight: 500;
     /* font-size: 18px; */
     font-size: calc(0.5em + 0.6vw);
+    /* line-height: 22px; */
     color: #777777;
 }
 
@@ -379,33 +639,22 @@ a:hover {
     margin-right: 4px;
 }
 
-
-/*
-*
-* ==========================================
-* card section end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* what we do section start
-* ==========================================
-*
-*/
-
 .what-we-do {
     font-family: Inter-Medium;
 }
 
 .what-we-do .what-we-do-virus {
     position: absolute;
+    /* left: -8.28%; */
     opacity: 0.5;
     right: 0;
     top: 1032px;
+    /* transform: rotate(8.88deg); */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .what-we-do-right .heading {
@@ -434,11 +683,6 @@ a:hover {
     color: #555555;
 }
 
-.what-we-do ul {
-    list-style: none;
-    padding-left: 0;
-}
-
 .what-we-do-right ul li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -454,41 +698,26 @@ a:hover {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
+    /* line-height: 32px; */
+    /* identical to box height, or 160% */
     letter-spacing: 0.02em;
     color: #555555;
 }
 
 
-/*
-*
-* ==========================================
-* what we do section end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* what we do and contact us btn style start
-* ==========================================
-*
-*/
+/*  */
 
 .btn-default {
     margin-top: 31px;
 }
 
-.btn-default a,
-.btn-default2 p {
+.btn-default a {
     text-decoration: none;
     color: inherit;
     font-family: "Louis-George-Cafe-Bold.ttf";
 }
 
-.btn-default a.cta,
-.btn-default2 p.cta {
+.btn-default a.cta {
     position: relative;
     margin: auto;
     padding: 14px 12px;
@@ -496,26 +725,22 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-.btn-default a.cta:hover::before,
-.btn-default2 p.cta:hover::before {
+.btn-default a.cta:hover::before {
     width: 108%;
     background: rgb(68, 181, 100);
 }
 
-.btn-default a.cta:hover svg,
-.btn-default2 p.cta:hover svg {
+.btn-default a.cta:hover svg {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     stroke: #fff;
 }
 
-.btn-default a.cta:hover span,
-.btn-default2 p.cta:hover span {
+.btn-default a.cta:hover span {
     color: #fcfaff !important;
 }
 
-.btn-default a.cta::before,
-.btn-default2 p.cta::before {
+.btn-default a.cta::before {
     content: "";
     position: absolute;
     top: 0;
@@ -532,8 +757,7 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-.btn-default a.cta span,
-.btn-default2 p.cta span {
+.btn-default a.cta span {
     position: relative;
     font-family: Inter-Medium;
     line-height: 0.56;
@@ -544,8 +768,7 @@ a:hover {
     color: #444444;
 }
 
-.btn-default a.cta svg,
-.btn-default2 p.cta svg {
+.btn-default a.cta svg {
     position: relative;
     top: 0px;
     margin-left: 10px;
@@ -560,35 +783,16 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-.btn-default a.cta:active,
-.btn-default2 p.cta:active {
+.btn-default a.cta:active {
     -webkit-transform: scale(0.96);
     transform: scale(0.96);
 }
 
-
-/*
-*
-* ==========================================
-* what we do and contact us btn style end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* prevention section  start
-* ==========================================
-*
-*/
-
 .prevention .heading {
-    font-family: Inter-SemiBold;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 33px;
+    font-family: Inter-SemiBold !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 33px !important;
     letter-spacing: 0.02em;
     color: #333333;
 }
@@ -603,11 +807,13 @@ a:hover {
 }
 
 .prevention .tagline {
-    font-family: Inter-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
+    /* letter-spacing: 0.03em; */
     color: #777777;
+    /* padding-right: 55px;
+    padding-left: 55px; */
 }
 
 .prevention .card-detail {
@@ -648,6 +854,7 @@ a:hover {
 
 .prevention .prevention-card img {
     margin-top: -45px;
+    /* padding-bottom: 15px; */
 }
 
 .prevention .px-22 {
@@ -655,29 +862,11 @@ a:hover {
     padding-right: 25px;
 }
 
-
-/*
-*
-* ==========================================
-* prevention section  end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* symptoms section  start
-* ==========================================
-*
-*/
-
 .symptoms .heading {
-    font-family: Inter-SemiBold;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 33px;
+    font-family: Inter-SemiBold !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 33px !important;
     letter-spacing: 0.02em;
     color: #333333;
 }
@@ -692,11 +881,13 @@ a:hover {
 }
 
 .symptoms .tagline {
-    font-family: Inter-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
+    /* letter-spacing: 0.03em; */
     color: #777777;
+    /* padding-right: 55px;
+    padding-left: 55px; */
 }
 
 .symptoms .symptoms-virus-left {
@@ -715,27 +906,14 @@ a:hover {
     top: 2828px;
 }
 
-
-/*
-*
-* ==========================================
-* symptoms section  end
-* ==========================================
-*
-*/
-
-
-/*
-*
-* ==========================================
-* Need help section  start
-* ==========================================
-*
-*/
-
 .need-help {
     background: linear-gradient(339.88deg, #64CF83 47.7%, #FFFFFF 47.71%);
 }
+
+
+/* html {
+    background-color: #64CF83;
+} */
 
 .need-help .cards-need-help {
     background: #FFFFFF;
@@ -764,16 +942,19 @@ a:hover {
 }
 
 .need-help .tagline {
-    font-family: Inter-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
+    /* letter-spacing: 0.03em; */
     color: #777777;
+    /* padding-right: 55px;
+    padding-left: 55px; */
 }
 
 .need-help .emp {
     display: flex;
     flex-direction: row;
+    /* justify-content: center; */
     align-items: center;
     padding: 0px;
 }
@@ -794,12 +975,12 @@ a:hover {
     color: #555555;
 }
 
-.need-help .pt {
+.need-help .cus {
     margin-top: 85px;
 }
 
 
-/* form */
+/*  */
 
 .need-help .filds .form-control {
     padding-left: 20px;
@@ -809,9 +990,13 @@ a:hover {
 
 .need-help .filds .form-control-feedback {
     position: absolute;
+    /* z-index: 2; */
     right: 40px;
     top: 15px;
     display: block;
+    /* width: 2.375rem;
+    height: 2.375rem; */
+    /* line-height: 2.375rem; */
     text-align: center;
     pointer-events: none;
     color: #aaa;
@@ -860,34 +1045,6 @@ a:hover {
     color: #777777;
 }
 
-
-/* input type=number arrow up down */
-
-
-/* Chrome, Safari, Edge, Opera */
-
-.number input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-
-/* Firefox */
-
-.number input[type=number] {
-    -moz-appearance: textfield;
-}
-
-.need-help .filds .form-control-feedback .comment {
-    position: absolute;
-    right: -1px;
-    top: -3px;
-    display: block;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
-}
-
 .need-help .filds textarea {
     background: #F7F7F7;
     border-radius: 12px;
@@ -899,67 +1056,100 @@ a:hover {
     border: none;
 }
 
-.need-help .filds textarea:focus {
-    outline: none;
-}
-
-
-/* Hide scrollbar but keep functionality */
-
-
-/* Hide scrollbar for Chrome, Safari and Opera  */
-
-textarea::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Hide scrollbar for IE, Edge and Firefox */
-
-textarea {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+.need-help .filds .form-control-feedback .comment {
+    position: absolute;
+    /* z-index: 2; */
+    right: -1px;
+    top: -3px;
+    display: block;
+    /* width: 2.375rem;
+    height: 2.375rem; */
+    /* line-height: 2.375rem; */
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
 }
 
 .btn-default2 {
     margin-top: 15px;
 }
 
-button {
-    appearance: auto;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: center;
-    cursor: default;
-    background-color: #fff;
-    box-sizing: none;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 6px;
-    border: none;
+.btn-default2 p {
+    text-decoration: none;
+    color: inherit;
+    font-family: "Louis-George-Cafe-Bold.ttf";
 }
 
+.btn-default2 p.cta {
+    position: relative;
+    margin: auto;
+    padding: 14px 12px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
 
-/*
-*
-* ==========================================
-* Need help section  end
-* ==========================================
-*
-*/
+.btn-default2 p.cta:hover::before {
+    width: 108%;
+    background: rgb(68, 181, 100);
+}
 
+.btn-default2 p.cta:hover svg {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    stroke: #fff;
+}
 
-/*
-*
-* ==========================================
-* footer section  start
-* ==========================================
-*
-*/
+.btn-default2 p.cta:hover span {
+    color: #fcfaff !important;
+}
+
+.btn-default2 p.cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    display: block;
+    border-radius: 30px;
+    background: rgba(255, 73, 82, 0);
+    border: 2px solid rgb(68, 181, 100);
+    border-right: 1px solid transparent;
+    border-width: 2px 2px 2px 2px;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-default2 p.cta span {
+    position: relative;
+    font-family: Inter-Medium;
+    line-height: 0.56;
+    vertical-align: middle;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #444444;
+}
+
+.btn-default2 p.cta svg {
+    position: relative;
+    top: 0px;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #444444;
+    stroke-width: 2;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-default2 p.cta:active {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+}
 
 .footer {
     background-color: #64CF83;
@@ -988,23 +1178,216 @@ button {
     height: 20px;
 }
 
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    /*color: -internal-light-dark(black, white);*/
+    /*letter-spacing: normal;*/
+    /*word-spacing: normal;*/
+    /*text-transform: none;*/
+    text-indent: 0px;
+    text-shadow: none;
+    /* display: inline-block; */
+    text-align: center;
+    /*align-items: flex-start;*/
+    cursor: default;
+    background-color: #fff;
+    box-sizing: none;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    /* border-width: 2px; */
+    /* border-style: outset; */
+    border: none;
+    /*border-image: none;*/
+}
 
-/*
-*
-* ==========================================
-* footer section  end
-* ==========================================
-*
-*/
+
+/* whatsapp chat */
+
+.floating-wpp {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 14px;
+    transition: bottom 0.2s;
+}
+
+.floating-wpp .floating-wpp-button {
+    position: relative;
+    border-radius: 25px 25px 25px 8px;
+    box-shadow: 1px 1px 4px rgba(60, 60, 60, 0.4);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.floating-wpp .floating-wpp-button img,
+.floating-wpp .floating-wpp-button svg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 50%;
+}
+
+.floating-wpp:hover {
+    bottom: 17px;
+}
+
+.floating-wpp:hover .floating-wpp-button {
+    box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.4);
+}
+
+.floating-wpp .floating-wpp-popup {
+    border-radius: 6px;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 1px 2px 13px rgb(60 60 60 / 14%);
+    width: 0px;
+    height: 0px;
+    bottom: 0;
+    opacity: 0;
+    transition: bottom 0.1s ease-out, opacity 0.2s ease-out;
+    transform-origin: bottom;
+}
+
+.floating-wpp .floating-wpp-popup.active {
+    padding: 0 12px 12px 12px;
+    width: 281px;
+    height: auto;
+    bottom: 82px;
+    opacity: 1;
+}
+
+.floating-wpp .floating-wpp-popup .floating-wpp-message {
+    opacity: 0;
+    border-radius: 12px;
+    padding: 11px 14px;
+    display: inline-block;
+    color: #000;
+    background-color: #fff;
+    word-break: break-word;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+}
+
+.floating-wpp .floating-wpp-popup.active .floating-wpp-message {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.floating-wpp .floating-wpp-popup .floating-wpp-head {
+    text-align: right;
+    color: #000;
+    background-color: #fff !important;
+    border-radius: 0 0 48% 48%;
+    margin: 0px -15px 35px -15px;
+    padding: 25px 25px 46px 25px;
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 4px 16px -3px rgb(0 0 0 / 10%)
+}
+
+strong.close {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.floating-wpp .floating-wpp-input-message {
+    /* background-color: white; */
+    margin: 25px 0px 0px 0px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    /* margin-left: 0px; */
+    /* margin-right: 0px; */
+    /* min-height: 50px; */
+    /* max-height: 48px; */
+    /* overflow-y: auto; */
+    flex-wrap: nowrap;
+    /* padding-right: 10px; */
+    border-radius: 26px;
+    background-color: #fff;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.floating-wpp .floating-wpp-input-message textarea {
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 5px 10px 5px 10px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 100%;
+    height: 18px;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+}
+
+.floating-wpp .floating-wpp-btn-send {
+    margin-left: 12px;
+    font-size: 0;
+    cursor: pointer;
+}
 
 
-/*
-*
-* ==========================================
-* Custom Scrollbar  start
-* ==========================================
-*
-*/
+/* input type=number arrow up down */
+
+
+/* Chrome, Safari, Edge, Opera */
+
+.floating-wpp input::-webkit-outer-spin-button,
+.floating-wpp input::-webkit-inner-spin-button,
+.number input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+.floating-wpp input[type=number],
+.number input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Hide scrollbar but keep functionality */
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+textarea {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* Custom Scrollbar  */
 
 ::-webkit-scrollbar {
     background: transparent;
@@ -1036,12 +1419,3 @@ button {
 :hover::-webkit-scrollbar-thumb {
     background: #dadce0;
 }
-
-
-/*
-*
-* ==========================================
-* Custom Scrollbar  start
-* ==========================================
-*
-*/

@@ -1,39 +1,44 @@
 <!doctype html>
-<html>
-
+<html lang="zxx">
 <head>
-    <title>Covid-19 Home care Junagadh</title>
+  
+    <title>Covid-19</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="" />
+  
+  <meta name="title" content="Home treatment for corona patient By GNC certified staff"/>
+  <meta name="description" content="The Best-experienced professionals are ready to help you for coming out from the covid situation. Get perfect home treatment for corona patients by skilled staff" />
     <meta name="keywords" content="Home-care" />
     <meta name="keywords" content="Covi-home-care" />
     <meta name="keywords" content="home-service" />
+    <meta name="keywords" content="atik" />
+    <meta name="keywords" content="atik-gohel" />
     <meta name="developer" content="Atik Gohel">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  	<!-- favicon -->
+	<link rel="icon" href="assets/images/covid%20home%20care%20logo1.png" sizes="16x16">
 
-    <!-- Favicon-->
-    <link rel="icon" href="assets/images/covid home care logo1.png" sizes="16x16">
-    <!-- bootstrap CSS-->
+	<!-- bootstrap CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/whatsapp.css">
 
 </head>
 
 <body>
 
 
-    <div class="navigation-wrap    py-lg-4 pt-md-4 py-sm-4 py-3 " id="home">
+    <div class="navigation-wrap bg-light-1 start-header  py-lg-4 pt-md-4 py-sm-4 py-3 " id="home">
         <div class="container">
             <div class="row py-3">
                 <div class="col-md-12 ">
                     <nav class="navbar navbar-expand-lg navbar-light">
 
-                        <a href="index.html" class="logo_site"><img src="assets/images/logo1.svg" class="img-fluid logo"></a>
-                        <!-- <a href="index.php" class="logo_site">Covid-19</a> -->
+                                                                <a href="index.html"><img src="assets/images/logo1.svg" class="img-fluid logo"></a>
+
+
 
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -79,15 +84,14 @@
 
     <section id="hero" class="clearfix  py-lg-4  py-md-1 py-sm-4 py-4">
         <div class="container ">
-            <img src="assets/images/header virus.svg" class="header-virus" alt="">
+            <img src="assets/images/header%20virus.svg" class="header-virus" alt="">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-6 intro-info order-md-first order-last justify-content-center align-self-center">
-                    <p class="alert-header"><img src="assets/images/header alert icon.svg" alt=""> COVID-19 ALERT</p>
+                    <p class="alert-header"><img src="assets/images/header%20alert%20icon.svg" alt=""> COVID-19 ALERT</p>
                     <h2>Together we fight <br> COVID-19
                     </h2>
                     <div class="header-tag-line">
-                        According to the World Health Organisation [WHO] this pandemic coronavirus can be defined as “The COVID-19 is an infectious disease caused by a newly discovered coronavirus”. The Best-experienced professionals are ready to help you for coming out from
-                        the covid situation. Get perfect home treatment for corona patients by skilled staff.
+                        According to the World Health Organisation [WHO] this pandemic coronavirus can be defined as “The COVID-19 is an infectious disease caused by a newly discovered coronavirus”. The Best-experienced professionals are ready to help you for coming out from the covid situation. Get perfect home treatment for corona patients by skilled staff.
 
                     </div>
                     <a href="#What-we-do" class="btn-get-started mt-4">Let us help</a>
@@ -106,59 +110,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
+               
                     <div class="cardss">
-                        <?php 
-
-                        $data = file_get_contents('https://api.covid19india.org/data.json');
-                        $coronalive = json_decode($data, true);
-                        ?>
-
+                        
                         <div class="cards">
                             <div class="card-body pt-xl-4 pb-xl-4 py-lg-4 py-md-4 py-sm-4 pb-0">
                                 <h5 class="card-title title">Total Cases</h5>
-                                <p class="card-text number">
-                                    <?php echo $coronalive['statewise'][14]['confirmed']; ?>
-                                </p>
-                                <p class="card-text percentage">
-                                    <?php echo $coronalive['statewise'][14]['deltaconfirmed']; ?> New Cases (Today)</p>
+                                <p class="card-text number">323499</p>
+                                <p class="card-text percentage">77 New Cases (Today)</p>
                             </div>
 
 
                             <div class="card-body pt-xl-4 pb-xl-4 py-lg-4 py-md-4 py-sm-4 pb-0 ">
                                 <h5 class="card-title title">Active Cases</h5>
-                                <p class="card-text number">
-                                    <?php echo $coronalive['statewise'][14]['active']; ?>
-                                </p>
+                                <p class="card-text number">1229</p>
                                 <p class="card-text percentage">Total Active cases</p>
                             </div>
 
 
                             <div class="card-body pt-xl-4 pb-xl-4 py-lg-4 py-md-4 py-sm-4 pt-4 pb-0">
                                 <h5 class="card-title title">Recovered</h5>
-                                <p class="card-text number" style="color:#64CF82">
-                                    <?php echo $coronalive['statewise'][14]['recovered']; ?>
-                                </p>
-                                <p class="card-text percentage">
-                                    <?php echo $coronalive['statewise'][14]['deltarecovered']; ?> New Recovered (Today)</p>
+                                <p class="card-text number" style="color:#64CF82">317872</p>
+                                <p class="card-text percentage">135 New Recovered (Today)</p>
                             </div>
 
 
                             <div class="card-body pt-xl-4 pb-xl-4 py-lg-4 py-md-4 pb-sm-4 pt-sm-0  pt-4">
                                 <h5 class="card-title title">Deaths</h5>
-                                <p class="card-text number" style="color: #FF0000;">
-                                    <?php echo $coronalive['statewise'][14]['deaths']; ?>
-                                </p>
-                                <p class="card-text percentage">
-                                    <?php echo $coronalive['statewise'][14]['deltadeaths']; ?> New Death (Today)</p>
+                                <p class="card-text number" style="color: #FF0000;">4398</p>
+                                <p class="card-text percentage">1 New Death (Today)</p>
                             </div>
                         </div>
                         <div class="card-tag-line pb-3 ">
                             <img src="assets/images/flag.svg" alt="india flag | atik gohel">
-                            <span class="country img-fluid"><?php echo $coronalive['statewise'][14]['state']; ?></span>
+                            <span class="country img-fluid">Jammu and Kashmir</span>
                             <span class="separator"> | </span>
                             <span class="title">Last update: </span>
-                            <span class="date"><?php echo $coronalive['statewise'][14]['lastupdatedtime']; ?></span>
+                            <span class="date">13/08/2021 23:27:22 </span>
                         </div>
 
                     </div>
@@ -168,7 +156,7 @@
 
             </div>
         </div>
-
+        </div>
     </section>
 
 
@@ -176,10 +164,10 @@
 
         <div class="container">
 
-            <img src="assets/images/what we do virus.svg" class="what-we-do-virus img-fluid" alt="">
+            <img src="assets/images/what%20we%20do%20virus.svg" class="what-we-do-virus img-fluid" alt="">
             <div class="row  ">
                 <div class="col-md-6 what-we-do-left  align-self-center ">
-                    <img src="assets/images/what we do.svg" alt="" class="img-fluid px-4">
+                    <img src="assets/images/what%20we%20do.svg" alt="" class="img-fluid px-4">
                 </div>
 
                 <div class="col-md-6 what-we-do-right pl-4 pr-0 align-self-center mt-md-0 mt-5">
@@ -243,7 +231,7 @@
 
                         <div class="col-md-4 px-22">
                             <div class="prevention-card ">
-                                <img src="assets/images/Wear a mask.png" class="img-fluid" alt="">
+                                <img src="assets/images/Wear%20a%20mask.png" class="img-fluid" alt="">
                                 <div class="card-detail">
                                     <h3 class="card-title">Wear a mask</h3>
                                     <p class="card-line">Masks can help prevent spread of the virus from the person wearing the mask to others.</p>
@@ -253,7 +241,7 @@
 
                         <div class="col-md-4 px-22">
                             <div class="prevention-card ">
-                                <img src="assets/images/Wash your hands often.png" class="img-fluid" alt="">
+                                <img src="assets/images/Wash%20your%20hands%20often.png" class="img-fluid" alt="">
                                 <div class="card-detail">
                                     <h3 class="card-title">Wash your hands often</h3>
                                     <p class="card-line">Clean your hands with soop and water, or alcohol-based hand sanitizer.</p>
@@ -263,7 +251,7 @@
 
                         <div class="col-md-4 px-22">
                             <div class="prevention-card ">
-                                <img src="assets/images/Physical distancing.png" class="img-fluid" alt="">
+                                <img src="assets/images/Physical%20distancing.png" class="img-fluid" alt="">
                                 <div class="card-detail">
                                     <h3 class="card-title">Physical distancing</h3>
                                     <p class="card-line">Maintain a safe distance especially from anyone who is coughinf or sneezing.</p>
@@ -278,8 +266,8 @@
 
     <section id="Symptoms" class="symptoms mt-5 pt-5 pb-5 mb-5 text-center">
         <div class="container">
-            <img src="assets/images/left side symptoms virus.svg" class="symptoms-virus-left img-fluid" alt="">
-            <img src="assets/images/right side symptoms virus.svg" class="symptoms-virus-right img-fluid" alt="">
+            <img src="assets/images/left%20side%20symptoms%20virus.svg" class="symptoms-virus-left img-fluid" alt="">
+            <img src="assets/images/right%20side%20symptoms%20virus.svg" class="symptoms-virus-right img-fluid" alt="">
 
             <div class="row">
                 <div class="col-12">
@@ -308,13 +296,13 @@
                                 <hr class="need-help-hr ml-auto mr-auto">
                             </div>
                             <div class="col-12 px-0">
-                                <p class="tagline ">helping hands will always remember while we have a look at the past. We are ready to help you to fight against this critical situation. </p>
+                                <p class="tagline ">helping hands will always remember while we have a look at the past.  We are ready to help you to fight against this critical situation. </p>
                             </div>
                             <div class="col-12 mt-4">
-                                <img src="assets/images/need help.png" class="img-fluid" alt="">
+                                <img src="assets/images/need%20help.png" class="img-fluid" alt="">
                             </div>
                         </div>
-                        <div class="row pt mb-2">
+                        <div class="row cus mb-2">
                             <div class="col-md-6 text-left pl-lg-5">
                                 <div class="emp ">
                                     <img src="assets/images/number.png" class="img-fluid" alt="">
@@ -333,49 +321,52 @@
                             </div>
                             <div class="col-md-6 pr-lg-5 mt-md-0 mt-5">
                                 <div class="">
-                                    <form class="row g-3" method="POST" action="form.php" name="myForm" id="contact-form">
+                                    <form class="row g-3" method="POST" action="https://covidhomecare.live/form.php" name="myForm"  id="contact-form">
 
                                         <div class="form-group col-md-12 filds">
-                                            <span class="form-control-feedback"> <img src="assets/images/name 1.png" alt=""> </span>
+                                            <span class="form-control-feedback"> <img src="assets/images/name%201.png" alt=""> </span>
                                             <input type="text" class="form-control" name="username" placeholder="Name*" required>
                                         </div>
 
 
-                                        <div class="form-group col-md-12 filds number">
+                                         <div class="form-group col-md-12 filds number">
                                             <span class="form-control-feedback"> <img src="assets/images/number-1.png" alt=""> </span>
-                                            <input type="text" class="form-control" pattern="^[6789]\d{9,9}$" title="Phone number with 6-9 and remaing 10 digit with 0-9" name="number" placeholder="Number*" required>
+                                            <input type="text" class="form-control"  pattern="^[6789]\d{9,9}$"  title="Phone number with 6-9 and remaing 10 digit with 0-9" name="number" placeholder="Number*" required>
                                         </div>
 
 
                                         <div class="form-group col-md-12 filds">
                                             <span class="form-control-feedback"> <img src="assets/images/number-1.png" alt=""> </span>
-                                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" placeholder="Email Address*" required>
+                                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  class="form-control" name="email" placeholder="Email Address*" required>
                                         </div>
 
                                         <div class="form-group col-md-12 filds ">
-                                            <span class="form-control-feedback "> <img src="assets/images/text 1.png" class="comment" alt=""> </span>
+                                            <span class="form-control-feedback "> <img src="assets/images/text%201.png" class="comment" alt=""> </span>
 
                                             <textarea class="form-control" name="message" placeholder="Leave a comment here*" style="height: 90px" required></textarea>
-
+                                            
                                         </div>
 
                                         <div class="col-12">
                                             <div class="btn-default2  ">
-                                                <button>
-                                                    <p href="#!" name="submit" class="cta">      
-                                                        <span>I need help</span>
-                                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                                
+                                            <!--<p><input type="submit" value="Send" /></p>-->
+                                            <button>
+                                            
+                                                 <p href="#!" name="submit" class="cta">
+                                                                
+                                                    <span>I need help</span>
+                                                    <svg width="13px" height="10px" viewBox="0 0 13 10">
                                                             <path d="M1,5 L11,5"></path>
                                                             <polyline points="8 1 12 5 8 9"></polyline>
                                                         </svg>
-                                                    </p>
-                                                </button>
+                                                </p></button>
                                             </div>
-                                        </div>
 
+                                        </div>
                                     </form>
 
-
+                                    
                                 </div>
 
                             </div>
@@ -391,7 +382,7 @@
         <div class="container ">
             <div class="row ">
                 <div class="col-md-6 left">
-                    <p>© 2021, Design & Developed by <a href="https://www.instagram.com/atik_gohel/">Atik Gohel</a> </p>
+                  <p>© 2021, Design & Developed by <a href="https://www.instagram.com/atik_gohel/" >Atik Gohel</a> </p>
                 </div>
                 <div class="col-md-6 right d-flex justify-content-end">
                     <a href="#home"> <img src="assets/images/top.png" class="mr-1 img-fluid" alt="">Back to top</a>
@@ -399,9 +390,6 @@
             </div>
         </div>
     </section>
-
-
-
 
 
 
@@ -414,7 +402,7 @@
 
 
     <!-- Custom Scripts-->
-    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         $('img').on('dragstart', function(event) {
@@ -424,23 +412,23 @@
             return false;
         });
     </script>
-
-
+    
+  
     <script type="text/javascript">
-        $(function() {
-            $('#myButton').floatingWhatsApp({
-                phone: '9170190435697',
-                popupMessage: 'Hello, how can we help you?',
-                message: "Hi The D Team, ...",
-                showPopup: true,
-                showOnIE: true,
-                headerTitle: "<img src='assets/images/thedteam.png' style= ' width: 40px; margin-right: 11px;   margin-bottom: 0px; border-radius: 8px;'>Whatsapp Chat! 👋",
-                // headerColor: 'crimson',
-                // backgroundColor: 'crimson',
-                // buttonImage: '<img src="whatsapp.svg" />'
-            });
-        });
-    </script>
-</body>
+    $(function() {
+        $('#myButton').floatingWhatsApp({
+            phone: '917019043569',
+            popupMessage: 'Hello, how can we help you?',
+            message: "Hi The D Team, ...",
+            showPopup: true,
+            showOnIE: true,
+            headerTitle: "<img src='assets/images/thedteam.png' style= ' width: 40px; margin-right: 11px;   margin-bottom: 0px; border-radius: 8px;'>Whatsapp Chat! 👋",
+            // headerColor: 'crimson',
+            // backgroundColor: 'crimson',
 
+            // buttonImage: '<img src="whatsapp.svg" />'
+        });
+    });
+</script>
+</body>
 </html>
