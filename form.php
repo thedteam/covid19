@@ -32,7 +32,7 @@ $errors = [];
     
 
     if (empty($errors)) {
-        $toEmail = 'muhammadatik143@gmail.com';
+        $toEmail = 'thedteam18@gmail.com';
         $emailSubject = 'New email from your contant form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
